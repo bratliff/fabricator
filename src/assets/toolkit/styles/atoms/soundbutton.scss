@@ -1,0 +1,15 @@
+/**
+ * Soundbutton styles
+ */
+
+button.soundbutton {
+    border-radius:50%;
+    width:170px;
+    height:170px;
+    background:none;
+    border:1px solid $main-blue;
+    img {
+        width:60%;
+        margin-left:10px;
+    }
+}
