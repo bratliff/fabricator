@@ -124,16 +124,25 @@ gulp.task('sprites', function () {
 gulp.task('svgstore', function () {
     var svgs = gulp
         .src('src/assets/toolkit/svg/*.svg')
-        .pipe(svgstore({ inlineSvg: true, preserveAspectRatio : 'xMidYMin meet' }));
+        .pipe(svgstore({
+            inlineSvg: true,
+            svg: {
+                viewBox : '0 0 100 100',
+                xmlns: 'http://www.w3.org/2000/svg'
+            },
+            symbol: {
+                preserveAspectRatio: 'xMidYMid meet'
+            }
+        }));
 
     function fileContents (filePath, file) {
         return file.contents.toString();
     }
 
     return gulp
-        .src('src/assets/toolkit/svg/svg.html')
+        .src('src/views/pages/svg-sample.html')
         .pipe(inject(svgs, { transform: fileContents }))
-        .pipe(gulp.dest(config.dest + '/assets/toolkit/svg/'));
+        .pipe(gulp.dest(config.dest + '/pages/'));
 });
 
 /*gulp.task('svgstore', function () {
