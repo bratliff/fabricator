@@ -1,0 +1,27 @@
+/**
+ * Phonicsbutton styles
+ */
+
+.bl-button {
+    padding:2px 80px;
+    background:none;
+    font-size:3.7rem;
+    border-radius:5px;
+    box-shadow:none;
+    border:1px solid #666;
+    font-weight:bold;
+    &:hover {
+        border:1px solid #fff;
+        background:$bl-lite-blue;
+    }
+    &:active {
+        background:$bl-blue;
+    }
+    &.disabled {
+        color:$bl-grey;
+        &:hover {
+            background:#fff;
+            border:1px solid #666;
+        }
+    }
+}
