@@ -22,4 +22,14 @@
             font-size:30px;
         }
     }
+    .soundbutton {
+        border-radius:50%;
+        width:200px;
+        height:200px;
+        background:none;
+        border:1px solid $main-blue;
+        position:relative;
+        background:white;
+
+    }
 }
