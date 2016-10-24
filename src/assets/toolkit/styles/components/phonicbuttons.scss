@@ -1,0 +1,35 @@
+/**
+ * Phonicsbutton styles
+ */
+
+.phonicbuttons {
+    position:relative;
+    padding-bottom:60px;
+    .checkbutton {
+        border-radius:50%;
+        width:90px;
+        height:90px;
+        background:none;
+        border:3px solid $main-blue;
+        position:relative;
+        top:85px;
+        left:-80px;
+        background:white;
+        &:hover {
+            background:$main-blue;
+        }
+        span {
+            font-size:30px;
+        }
+    }
+    .soundbutton {
+        border-radius:50%;
+        width:200px;
+        height:200px;
+        background:none;
+        border:1px solid $main-blue;
+        position:relative;
+        background:white;
+
+    }
+}

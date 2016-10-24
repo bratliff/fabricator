@@ -5,8 +5,8 @@
  @import 'colors';
 
 //@import '../../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
-@import './atoms/soundbutton';
-@import './molecules/phonicbuttons';
+
+@import './components/phonicbuttons';
 
 .btnc,.btn:active {
    outline: none !important;

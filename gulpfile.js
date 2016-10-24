@@ -9,12 +9,17 @@ var gulp = require('gulp');
 var gutil = require('gulp-util');
 var gulpif = require('gulp-if');
 var imagemin = require('gulp-imagemin');
+var inject = require('gulp-inject');
+var path = require('path');
 var prefix = require('gulp-autoprefixer');
 var rename = require('gulp-rename');
 var reload = browserSync.reload;
 var runSequence = require('run-sequence');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
+var svgSprite = require("gulp-svg-sprites");
+var svgstore = require('gulp-svgstore');
+var svgmin = require('gulp-svgmin');
 var webpack = require('webpack');
 
 
@@ -32,6 +37,7 @@ var config = {
 		},
 		images: 'src/assets/toolkit/images/**/*',
         sounds: 'src/assets/toolkit/sounds/**/*',
+        svg: 'src/assets/toolkit/svg/**/*',
 		views: 'src/toolkit/views/*.html'
 	},
 	dest: 'dist'
@@ -100,11 +106,54 @@ gulp.task('images', ['favicon'], function () {
 		.pipe(gulp.dest(config.dest + '/assets/toolkit/images'));
 });
 
-// images
+// sounds
 gulp.task('sounds', function () {
 	return gulp.src(config.src.sounds)
 		.pipe(gulp.dest(config.dest + '/assets/toolkit/sounds'));
 });
+
+// svgs
+gulp.task('sprites', function () {
+    return gulp.src(config.src.svg)
+        .pipe(svgSprite())
+        .pipe(svgstore())
+        .pipe(gulp.dest(config.dest + '/assets/toolkit/svg'));
+});
+
+//SVG Store and SVG inject
+gulp.task('svgstore', function () {
+    var svgs = gulp
+        .src('src/assets/toolkit/svg/*.svg')
+        .pipe(svgstore({ inlineSvg: true, preserveAspectRatio : 'xMidYMin meet' }));
+
+    function fileContents (filePath, file) {
+        return file.contents.toString();
+    }
+
+    return gulp
+        .src('src/assets/toolkit/svg/svg.html')
+        .pipe(inject(svgs, { transform: fileContents }))
+        .pipe(gulp.dest(config.dest + '/assets/toolkit/svg/'));
+});
+
+/*gulp.task('svgstore', function () {
+    return gulp
+        .src('src/assets/toolkit/svg/*.svg')
+        .pipe(svgmin(function (file) {
+            var prefix = path.basename(file.relative, path.extname(file.relative));
+            return {
+                plugins: [{
+                    cleanupIDs: {
+                        prefix: prefix + '-',
+                        minify: true
+                    }
+                }]
+            }
+        }))
+        .pipe(svgstore())
+        .pipe(gulp.dest('dist/assets/toolkit/svg'));
+});*/
+
 
 gulp.task('favicon', function () {
 	return gulp.src('./src/favicon.ico')
@@ -178,6 +227,7 @@ gulp.task('default', ['clean'], function () {
 		'scripts',
 		'images',
         'sounds',
+        'svgstore',
 		'assemble'
 	];
 
