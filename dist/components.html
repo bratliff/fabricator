@@ -67,30 +67,13 @@
 				</li>
 		
 				<li>
-					<a href="atoms.html" class="f-menu__heading">Atoms</a>
-					<ul>
-						<li>
-							<a href="atoms.html#soundbutton">Soundbutton</a>
-						</li>
-					</ul>
-				</li>
-				<li>
 					<a href="components.html" class="f-menu__heading">Components</a>
 					<ul>
-						<li>
-							<a href="components.html#button">Button</a>
-						</li>
-						<li>
-							<a href="components.html#checkbox">Checkbox</a>
-						</li>
 						<li>
 							<a href="components.html#lists">Lists</a>
 						</li>
 						<li>
-							<a href="components.html#paragraph">Paragraph</a>
-						</li>
-						<li>
-							<a href="components.html#radio">Radio</a>
+							<a href="components.html#phonicbuttons">Phonicbuttons</a>
 						</li>
 						<li>
 							<a href="components.html#select">Select</a>
@@ -103,14 +86,6 @@
 						</li>
 						<li>
 							<a href="components.html#textarea">Textarea</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="molecules.html" class="f-menu__heading">Molecules</a>
-					<ul>
-						<li>
-							<a href="molecules.html#phonicbuttons">Phonicbuttons</a>
 						</li>
 					</ul>
 				</li>
@@ -158,65 +133,6 @@
 
 	
 <h1 data-f-toggle="labels">Components</h1>
-
-
-<div class="f-item-group" id="button">
-
-	<div class="f-item-heading-group" data-f-toggle="labels">
-		<h2 class="f-item-heading">Button</h2>
-		<div class="f-item-controls">
-			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
-				<svg>
-					<use xlink:href="#f-icon-notes" />
-				</svg>
-			</span>
-			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
-				<svg>
-					<use xlink:href="#f-icon-code" />
-				</svg>
-			</span>
-		</div>
-	</div><div class="f-item-notes" data-f-toggle="notes">
-	<p>These are notes associated with this <code>button</code> component.</p>
-
-</div>
-<div class="f-item-preview">
-	<button type="button" class="btn btn-danger">Danger</button>
-</div>
-<div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<pre><code class="language-markup">&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-danger&quot;&gt;Danger&lt;/button&gt;</code></pre>
-</div>
-
-
-</div>
-
-
-<div class="f-item-group" id="checkbox">
-
-	<div class="f-item-heading-group" data-f-toggle="labels">
-		<h2 class="f-item-heading">Checkbox</h2>
-		<div class="f-item-controls">
-			
-			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
-				<svg>
-					<use xlink:href="#f-icon-code" />
-				</svg>
-			</span>
-		</div>
-	</div>
-<div class="f-item-preview">
-	<label>
-	<input type="checkbox" /> Checkbox
-</label>
-</div>
-<div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<pre><code class="language-markup">&lt;label&gt;
-	&lt;input type&#x3D;&quot;checkbox&quot; /&gt; Checkbox
-&lt;/label&gt;</code></pre>
-</div>
-
-
-</div>
 
 
 <div class="f-item-group" id="lists">
@@ -284,70 +200,69 @@
 </div>
 
 
-<div class="f-item-group" id="paragraph">
+<div class="f-item-group" id="phonicbuttons">
 
 	<div class="f-item-heading-group" data-f-toggle="labels">
-		<h2 class="f-item-heading">Paragraph</h2>
+		<h2 class="f-item-heading">Phonicbuttons</h2>
 		<div class="f-item-controls">
-			
+			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+				<svg>
+					<use xlink:href="#f-icon-notes" />
+				</svg>
+			</span>
 			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
 				<svg>
 					<use xlink:href="#f-icon-code" />
 				</svg>
 			</span>
 		</div>
-	</div>
+	</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>These are notes associated with this <code>phonic buttons</code> component.</p>
+
+</div>
 <div class="f-item-preview">
-	<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
-	nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus.</p>
+	<div class="phonicbuttons">
+	<button type="button" class="btn soundbutton">
+        <img src="/assets/toolkit/images/speaker-off.gif">
+	</button>
+	<button type="button" class="btn checkbutton">
+		<span class="glyphicon glyphicon-ok"></span>
+	</button>
+	<button type="button" class="btn soundbutton">
+        <img src="/assets/toolkit/images/speaker-off.gif">
+	</button>
+	<button type="button" class="btn checkbutton">
+		<span class="glyphicon glyphicon-ok"></span>
+	</button>
+	<button type="button" class="btn soundbutton">
+        <img src="/assets/toolkit/images/speaker-off.gif">
+	</button>
+	<button type="button" class="btn checkbutton">
+		<span class="glyphicon glyphicon-ok"></span>
+	</button>
+</div>
 </div>
 <div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<pre><code class="language-markup">&lt;p&gt;Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
-	nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus.&lt;/p&gt;</code></pre>
-</div>
-
-
-</div>
-
-
-<div class="f-item-group" id="radio">
-
-	<div class="f-item-heading-group" data-f-toggle="labels">
-		<h2 class="f-item-heading">Radio</h2>
-		<div class="f-item-controls">
-			
-			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
-				<svg>
-					<use xlink:href="#f-icon-code" />
-				</svg>
-			</span>
-		</div>
-	</div>
-<div class="f-item-preview">
-	<label>
-	<input type="radio" name="groupName" id="radio1" /> Radio 1
-</label>
-
-<label>
-	<input type="radio" name="groupName" id="radio2" /> Radio 2
-</label>
-
-<label>
-	<input type="radio" name="groupName" id="radio3" /> Radio 3
-</label>
-</div>
-<div class="f-item-code f-item-hidden" data-f-toggle="code">
-	<pre><code class="language-markup">&lt;label&gt;
-	&lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;groupName&quot; id&#x3D;&quot;radio1&quot; /&gt; Radio 1
-&lt;/label&gt;
-
-&lt;label&gt;
-	&lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;groupName&quot; id&#x3D;&quot;radio2&quot; /&gt; Radio 2
-&lt;/label&gt;
-
-&lt;label&gt;
-	&lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;groupName&quot; id&#x3D;&quot;radio3&quot; /&gt; Radio 3
-&lt;/label&gt;</code></pre>
+	<pre><code class="language-markup">&lt;div class&#x3D;&quot;phonicbuttons&quot;&gt;
+	&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn soundbutton&quot;&gt;
+        &lt;img src&#x3D;&quot;/assets/toolkit/images/speaker-off.gif&quot;&gt;
+	&lt;/button&gt;
+	&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn checkbutton&quot;&gt;
+		&lt;span class&#x3D;&quot;glyphicon glyphicon-ok&quot;&gt;&lt;/span&gt;
+	&lt;/button&gt;
+	&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn soundbutton&quot;&gt;
+        &lt;img src&#x3D;&quot;/assets/toolkit/images/speaker-off.gif&quot;&gt;
+	&lt;/button&gt;
+	&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn checkbutton&quot;&gt;
+		&lt;span class&#x3D;&quot;glyphicon glyphicon-ok&quot;&gt;&lt;/span&gt;
+	&lt;/button&gt;
+	&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn soundbutton&quot;&gt;
+        &lt;img src&#x3D;&quot;/assets/toolkit/images/speaker-off.gif&quot;&gt;
+	&lt;/button&gt;
+	&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn checkbutton&quot;&gt;
+		&lt;span class&#x3D;&quot;glyphicon glyphicon-ok&quot;&gt;&lt;/span&gt;
+	&lt;/button&gt;
+&lt;/div&gt;</code></pre>
 </div>
 
 

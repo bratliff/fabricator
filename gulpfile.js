@@ -31,6 +31,7 @@ var config = {
 			toolkit: 'src/assets/toolkit/styles/toolkit.scss'
 		},
 		images: 'src/assets/toolkit/images/**/*',
+        sounds: 'src/assets/toolkit/sounds/**/*',
 		views: 'src/toolkit/views/*.html'
 	},
 	dest: 'dist'
@@ -97,6 +98,12 @@ gulp.task('images', ['favicon'], function () {
 	return gulp.src(config.src.images)
 		.pipe(imagemin())
 		.pipe(gulp.dest(config.dest + '/assets/toolkit/images'));
+});
+
+// images
+gulp.task('sounds', function () {
+	return gulp.src(config.src.sounds)
+		.pipe(gulp.dest(config.dest + '/assets/toolkit/sounds'));
 });
 
 gulp.task('favicon', function () {
@@ -170,6 +177,7 @@ gulp.task('default', ['clean'], function () {
 		'styles',
 		'scripts',
 		'images',
+        'sounds',
 		'assemble'
 	];
 

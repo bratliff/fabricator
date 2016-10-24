@@ -4,4 +4,4 @@
 
 'use strict';
 
-var playSound = require('./phonicbuttons.js');
+var playSound = require('./components/phonicbuttons.js');

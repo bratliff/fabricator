@@ -11,9 +11,9 @@
         height:90px;
         background:none;
         border:3px solid $main-blue;
-        position:absolute;
-        left:100px;
-        top:100px;
+        position:relative;
+        top:85px;
+        left:-80px;
         background:white;
         &:hover {
             background:$main-blue;

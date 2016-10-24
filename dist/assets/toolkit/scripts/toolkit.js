@@ -67,22 +67,37 @@
 	'use strict';
 
 	var bgColor,
-	    active = false;
+	    index = 0;
+
+	var sounds = ['chime1.m4a', 'chime2.m4a', 'quack2.mp3'];
+
+	var soundclip = document.createElement('audio');
+	soundclip.setAttribute('src', '/assets/toolkit/sounds/' + sounds[0]);
 
 	$(document).ready(function () {
 	    $('.soundbutton').click(function () {
-	        $(this).find('img').attr('src', '/assets/toolkit/images/animated-speaker.gif');
-	    });
-	    $('.checkbutton').click(function () {
-	        if (!active) {
-	            $(this).css({ 'backgroundColor': '#bddbf0', 'border': '3px solid #fff' });
-	            $('.soundbutton').css({ 'backgroundColor': '#bddbf0' });
-	            active = true;
-	        } else {
-	            $(this).css({ 'backgroundColor': '#fff', 'border': '3px solid #bddbf0' });
-	            $('.soundbutton').css({ 'backgroundColor': '#fff' });
-	            active = false;
+	        $('.soundbutton').find('img').attr('src', '/assets/toolkit/images/speaker-off.gif');
+	        $('.soundbutton').css({ 'color': '#fff' });
+
+	        //this prevents the browser from caching the animated GIF and not reloading it
+	        var d = new Date();
+	        $(this).find('img').attr('src', '/assets/toolkit/images/animated-speaker.gif?' + d.getTime());
+
+	        index = $(this).index();
+	        if (index === 2) {
+	            index = 1;
+	        } else if (index === 4) {
+	            index = 2;
 	        }
+	        soundclip.setAttribute('src', '/assets/toolkit/sounds/' + sounds[index]);
+	        soundclip.play();
+	    });
+	    $('.checkbutton').click(function (e) {
+	        $('.soundbutton').find('img').attr('src', '/assets/toolkit/images/speaker-off.gif');
+	        $('.soundbutton').css({ 'backgroundColor': '#fff' });
+	        $('.checkbutton').css({ 'backgroundColor': '#fff', 'border': '3px solid #bddbf0' });
+	        $(this).css({ 'backgroundColor': '#bddbf0', 'border': '3px solid #fff' });
+	        $(this).prev('.soundbutton').css({ 'backgroundColor': '#bddbf0' });
 	    });
 	});
 
