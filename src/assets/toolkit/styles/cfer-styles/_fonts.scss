@@ -1,0 +1,16 @@
+// --------------------------------------------------
+// CFER Fonts
+// --------------------------------------------------
+
+// Loop through fonts and generate corresponding font-face definitions
+@for $n from 1 through length($cfer-fonts) {
+    $cfer-font: nth($cfer-fonts, $n);
+
+    @include font-face(#{$cfer-font},
+                font-files("#{$cfer-font}/#{$cfer-font}.woff",
+                        "#{$cfer-font}/#{$cfer-font}.ttf",
+                        "#{$cfer-font}/#{$cfer-font}.svg"),
+                "#{$cfer-font}/#{$cfer-font}.eot",
+                "normal",
+                "normal");
+}

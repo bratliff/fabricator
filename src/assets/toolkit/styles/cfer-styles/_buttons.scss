@@ -1,0 +1,18 @@
+// --------------------------------------------------
+// Overrides
+// --------------------------------------------------
+
+.btn {
+	font-family: $btn-font;
+}
+
+.btn-lg {
+	height: $btn-lg-height;
+	line-height: $btn-lg-height;
+	border-radius: $border-radius-base;
+	padding: 0 $padding-large-horizontal;
+}
+
+button + button {
+	margin-left: 20px;
+}

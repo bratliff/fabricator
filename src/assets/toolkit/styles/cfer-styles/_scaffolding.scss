@@ -1,0 +1,17 @@
+// --------------------------------------------------
+// Overrides
+// --------------------------------------------------
+
+html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+	font-family: $font-family-base;
+	font-size: $font-size-base;
+    color: $text-dark;
+    background-color: $background-light;
+}

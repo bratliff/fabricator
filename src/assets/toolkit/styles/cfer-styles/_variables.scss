@@ -1,0 +1,59 @@
+// --------------------------------------------------
+// Overrides
+// --------------------------------------------------
+
+// Colors
+// --------------------------------------------------
+
+// Amplify brand colors
+$amplify-orange: #f37321;
+$amplify-grey1: #77787b;
+$amplify-grey2: #bcbec0;
+$amplify-purple: #9b5ba5;
+$amplify-blue1: #13b5ea;
+$amplify-blue2: #4b63ae;
+$amplify-green: #8dc63f;
+$amplify-red: #ee3124;
+$amplify-yellow: #fdef42;
+
+// CFER colors
+$cfer-green: #00a651;
+$cfer-yellow: #fff200;
+$cfer-red: #e3121a;
+
+// Greys
+$cfer-grey1: #30333d;
+$cfer-grey2: #434858;
+$cfer-grey3: #8a92a8;
+$cfer-grey4: #f2f3f6;
+
+// Color assignments
+$brand-primary: $amplify-orange;
+$background-dark: $cfer-grey2;
+$background-light: $cfer-grey4;
+$text-dark: $cfer-grey1;
+$text-medium: $cfer-grey2;
+$text-light: $cfer-grey3;
+
+// Typography
+// --------------------------------------------------
+
+$font-family-sans-serif: "open-sans-regular", Arial, sans-serif;
+
+$font-size-base: 16px;
+
+$font-size-h1: 40px;
+$font-size-h2: 32px;
+$font-size-h3: 20px;
+$font-size-h4: 14px;
+
+$headings-font-weight: normal;
+
+$cfer-fonts: amplify, amplify-light, amplify-icon, open-sans-regular, open-sans-light, open-sans-bold, open-sans-semi-bold, open-sans-extra-bold, open-sans-italic, open-sans-semi-bold-italic, open-sans-bold-italic, roboto-black, roboto-bold, roboto-italic, roboto-light, roboto-light-italic, roboto-medium, roboto-medium-italic, roboto-regular;
+
+// Buttons
+// --------------------------------------------------
+
+$btn-font: "roboto-regular", Arial, sans-serif;
+
+$btn-lg-height: 44px;
