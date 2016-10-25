@@ -32,4 +32,10 @@
         background:white;
 
     }
+    .activated {
+        background:$main-blue;
+        &.checkbutton {
+            border:3px solid #fff;
+        }
+    }
 }

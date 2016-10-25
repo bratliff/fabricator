@@ -21,7 +21,7 @@ $(document).ready(function(){
         //this prevents the browser from caching the animated GIF and not reloading it
         var d = new Date();
         $(this).find('img').attr('src','/assets/toolkit/images/animated-speaker.gif?'+d.getTime());
-        
+
         index = $(this).index();
         if(index === 2) {
             index = 1;
@@ -33,9 +33,9 @@ $(document).ready(function(){
     });
     $('.checkbutton').click(function(e){
         $('.soundbutton').find('img').attr('src','/assets/toolkit/images/speaker-off.gif');
-        $('.soundbutton').css({'backgroundColor':'#fff'});
-        $('.checkbutton').css({'backgroundColor':'#fff','border':'3px solid #bddbf0'});
-        $(this).css({'backgroundColor':'#bddbf0','border':'3px solid #fff'});
-        $(this).prev('.soundbutton').css({'backgroundColor':'#bddbf0'});
+        $('.soundbutton, .checkbutton').removeClass('activated');
+        $(this).addClass('activated');
+        $(this).prev('.soundbutton').addClass('activated');
+
     });
 });
