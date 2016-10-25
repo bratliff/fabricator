@@ -18,7 +18,7 @@ var runSequence = require('run-sequence');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var svgSprite = require("gulp-svg-sprites");
-var svgstore = require('gulp-svgstore');
+//var svgstore = require('gulp-svgstore');
 var svgmin = require('gulp-svgmin');
 var webpack = require('webpack');
 
@@ -236,7 +236,6 @@ gulp.task('default', ['clean'], function () {
 		'scripts',
 		'images',
         'sounds',
-        'svgstore',
 		'assemble'
 	];
 
