@@ -8,6 +8,7 @@ var del = require('del');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var gulpif = require('gulp-if');
+var compass = require('gulp-compass');
 var imagemin = require('gulp-imagemin');
 var inject = require('gulp-inject');
 var path = require('path');
@@ -18,7 +19,7 @@ var runSequence = require('run-sequence');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var svgSprite = require("gulp-svg-sprites");
-//var svgstore = require('gulp-svgstore');
+var svgstore = require('gulp-svgstore');
 var svgmin = require('gulp-svgmin');
 var webpack = require('webpack');
 
