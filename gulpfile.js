@@ -33,7 +33,7 @@ var config = {
 		},
 		styles: {
 			fabricator: 'src/assets/fabricator/styles/fabricator.scss',
-			toolkit: 'src/assets/toolkit/styles/toolkit.scss'
+			toolkit: 'src/assets/toolkit/styles/*.scss'
 		},
 		images: 'src/assets/toolkit/images/**/*',
         sounds: 'src/assets/toolkit/sounds/**/*',
