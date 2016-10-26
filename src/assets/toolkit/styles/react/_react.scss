@@ -1,0 +1,50 @@
+#soundbuttons {
+    font-size:2em;
+    position:relative;
+    .selected {
+        background:red;
+    }
+    button {
+        margin-top:10px;
+        border-radius:50%;
+        position:relative;
+        &:active {
+            background:#fff;
+        }
+        &:first-child {
+            width:150px;
+            height:150px;
+            border-radius: 50%;
+            padding-left:20px;
+            .glyphicon {
+                font-size:1.5em;
+            }
+        }
+        &:last-child {
+            border-radius: 50%;
+            height:80px;
+            width:80px;
+            position:absolute;
+            top:100px;
+            left:100px;
+            border:3px solid #666;
+            .glyphicon {
+                font-size:2em;
+            }
+        }
+    }
+    .soundwave {
+        top:25px;
+        position:absolute;
+        right:20px;
+    }
+    #speakerOff {
+        //float:left;
+        position:absolute;
+        top:25px;
+        left:20px;
+    }
+    .selected {
+        background:$main-blue;
+    }
+}
