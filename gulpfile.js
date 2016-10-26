@@ -3,6 +3,7 @@
 // modules
 var assemble = require('fabricator-assemble');
 var browserSync = require('browser-sync');
+var compass = require('compass');
 var csso = require('gulp-csso');
 var del = require('del');
 var gulp = require('gulp');
@@ -34,7 +35,7 @@ var config = {
 		},
 		styles: {
 			fabricator: 'src/assets/fabricator/styles/fabricator.scss',
-			toolkit: 'src/assets/toolkit/styles/*.scss'
+			toolkit: 'src/assets/toolkit/styles/toolkit.scss'
 		},
 		images: 'src/assets/toolkit/images/**/*',
         sounds: 'src/assets/toolkit/sounds/**/*',
