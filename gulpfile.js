@@ -9,7 +9,6 @@ var del = require('del');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var gulpif = require('gulp-if');
-var compass = require('gulp-compass');
 var imagemin = require('gulp-imagemin');
 var inject = require('gulp-inject');
 var path = require('path');
