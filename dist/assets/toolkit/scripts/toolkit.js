@@ -10341,7 +10341,7 @@
 	  'h2',
 	  null,
 	  'Hello, world!'
-	), document.getElementById('react-sample'));
+	), document.getElementById('soundbuttons'));
 
 /***/ },
 /* 5 */

@@ -6,4 +6,4 @@
 
 var playSound = require('./components/phonicbuttons.js');
 
-var reactSample = require('./react/app.js');
+var reactSample = require('./react/soundbuttons.js');
