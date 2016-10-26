@@ -36,7 +36,7 @@ var SoundButton = React.createClass({
             <div>
             <Button bsSize="large" onClick={this.playSound} className={selectStatus} >
                 <img src="/assets/toolkit/images/speaker-off.gif" alt="speaker" id="speakerOff"/>
-                <audio src="/assets/toolkit/sounds/um.m4a" id="audioclip" autoplay></audio>
+                <audio src="/assets/toolkit/sounds/chime2.m4a" id="audioclip" autoplay></audio>
                 { this.state.playing ? <PlayAnim /> : null }
                 </Button>
                 <Button  bsSize="large" id="choicebutton" onClick={this.select} className={selectStatus}>

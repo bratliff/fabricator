@@ -10377,7 +10377,7 @@
 	                Button,
 	                { bsSize: 'large', onClick: this.playSound, className: selectStatus },
 	                React.createElement('img', { src: '/assets/toolkit/images/speaker-off.gif', alt: 'speaker', id: 'speakerOff' }),
-	                React.createElement('audio', { src: '/assets/toolkit/sounds/um.m4a', id: 'audioclip', autoplay: true }),
+	                React.createElement('audio', { src: '/assets/toolkit/sounds/chime2.m4a', id: 'audioclip', autoplay: true }),
 	                this.state.playing ? React.createElement(PlayAnim, null) : null
 	            ),
 	            React.createElement(
