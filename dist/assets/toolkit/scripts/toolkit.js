@@ -10363,11 +10363,10 @@
 	        this.setState({ playing: true });
 	        var audioclip = document.getElementById('audioclip');
 	        audioclip.play();
-	        var timeout = setTimeout(this.killAnim, 1400);
+	        var timeout = setTimeout(this.killAnim, 450);
 	    },
 	    select: function select() {
 	        this.setState({ selected: !this.state.selected });
-	        console.log('removing state');
 	    },
 	    render: function render() {
 	        var selectStatus = this.state.selected ? 'selected' : 'unselected';
@@ -10376,14 +10375,14 @@
 	            null,
 	            React.createElement(
 	                Button,
-	                { bsSize: 'large', onClick: this.playSound },
-	                React.createElement('img', { src: 'img/speaker-off.gif', alt: 'speaker', className: 'speakerOff' }),
-	                React.createElement('audio', { src: 'img/meow.mp3', id: 'audioclip', autoplay: true }),
+	                { bsSize: 'large', onClick: this.playSound, className: selectStatus },
+	                React.createElement('img', { src: '/assets/toolkit/images/speaker-off.gif', alt: 'speaker', id: 'speakerOff' }),
+	                React.createElement('audio', { src: '/assets/toolkit/sounds/um.m4a', id: 'audioclip', autoplay: true }),
 	                this.state.playing ? React.createElement(PlayAnim, null) : null
 	            ),
 	            React.createElement(
 	                Button,
-	                { bsSize: 'large', className: 'choicebutton', onClick: this.select },
+	                { bsSize: 'large', id: 'choicebutton', onClick: this.select, className: selectStatus },
 	                React.createElement('span', { className: 'glyphicon glyphicon-ok' })
 	            )
 	        );
@@ -10397,7 +10396,7 @@
 	        return React.createElement(
 	            'div',
 	            { className: 'soundwave' },
-	            React.createElement('img', { src: 'img/speaker-loop.gif', alt: 'soundbars' })
+	            React.createElement('img', { src: '/assets/toolkit/images/speaker-loop.gif', alt: 'soundbars' })
 	        );
 	    }
 	});
@@ -10414,7 +10413,6 @@
 	        alert('key: ' + e.target);
 	    },
 	    render: function render() {
-	        var testarray = ['peas', 'pickles', 'cilantro'];
 	        var soundbuttons = [];
 	        for (var n = 0; n < this.props.count; n++) {
 	            // We can compare to state here so we're no longer always selecting the first board.

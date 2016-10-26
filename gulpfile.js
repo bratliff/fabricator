@@ -125,16 +125,7 @@ gulp.task('sprites', function () {
 gulp.task('svgstore', function () {
     var svgs = gulp
         .src('src/assets/toolkit/svg/*.svg')
-        .pipe(svgstore({
-            inlineSvg: true,
-            svg: {
-                viewBox : '0 0 100 100',
-                xmlns: 'http://www.w3.org/2000/svg'
-            },
-            symbol: {
-                preserveAspectRatio: 'xMidYMid meet'
-            }
-        }));
+        .pipe(svgstore());
 
     function fileContents (filePath, file) {
         return file.contents.toString();

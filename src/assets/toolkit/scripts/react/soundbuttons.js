@@ -25,22 +25,21 @@ var SoundButton = React.createClass({
         this.setState({playing:true});
         var audioclip = document.getElementById('audioclip');
         audioclip.play();
-        var timeout = setTimeout(this.killAnim, 1400);
+        var timeout = setTimeout(this.killAnim, 450);
     },
     select() {
         this.setState({selected: !this.state.selected});
-        console.log('removing state')
     },
     render: function() {
         var selectStatus = this.state.selected ? 'selected' : 'unselected'
         return (
             <div>
-            <Button bsSize="large" onClick={this.playSound} >
-                <img src="img/speaker-off.gif" alt="speaker" className="speakerOff"/>
-                <audio src="img/meow.mp3" id="audioclip" autoplay></audio>
+            <Button bsSize="large" onClick={this.playSound} className={selectStatus} >
+                <img src="/assets/toolkit/images/speaker-off.gif" alt="speaker" id="speakerOff"/>
+                <audio src="/assets/toolkit/sounds/um.m4a" id="audioclip" autoplay></audio>
                 { this.state.playing ? <PlayAnim /> : null }
                 </Button>
-                <Button  bsSize="large" className="choicebutton" onClick={this.select}>
+                <Button  bsSize="large" id="choicebutton" onClick={this.select} className={selectStatus}>
                     <span className="glyphicon glyphicon-ok"></span>
                 </Button>
             </div>
@@ -52,7 +51,7 @@ var PlayAnim = React.createClass({
     render: function() {
         return (
             <div className="soundwave">
-                <img src="img/speaker-loop.gif" alt="soundbars"/>
+                <img src="/assets/toolkit/images/speaker-loop.gif" alt="soundbars"/>
             </div>
         );
     }
@@ -69,7 +68,6 @@ var SoundButtonGroup = React.createClass({
         alert('key: ' + e.target)
     },
     render: function() {
-        var testarray = ['peas','pickles','cilantro']
         var soundbuttons = [];
         for (var n = 0; n < this.props.count; n++) {
           // We can compare to state here so we're no longer always selecting the first board.

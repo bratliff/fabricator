@@ -7,8 +7,9 @@
     button {
         margin-top:10px;
         border-radius:50%;
-        &:hover {
-
+        position:relative;
+        &:active {
+            background:#fff;
         }
         &:first-child {
             width:150px;
@@ -33,12 +34,17 @@
         }
     }
     .soundwave {
-        float:right;
+        top:25px;
+        position:absolute;
+        right:20px;
     }
-    .speakerOff {
-        float:left;
+    #speakerOff {
+        //float:left;
+        position:absolute;
+        top:35px;
+        left:20px;
     }
     .selected {
-        background:red;
+        background:$main-blue;
     }
 }
