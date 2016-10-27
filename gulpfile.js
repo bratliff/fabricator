@@ -3,7 +3,7 @@
 // modules
 var assemble = require('fabricator-assemble');
 var browserSync = require('browser-sync');
-var compass = require('gulp-compass');
+//var compass = require('gulp-compass');
 var cheerio = require('gulp-cheerio');
 var csso = require('gulp-csso');
 var del = require('del');

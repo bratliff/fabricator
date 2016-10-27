@@ -9,8 +9,8 @@
     @include font-face(#{$cfer-font},
                 font-files("../fonts/#{$cfer-font}/#{$cfer-font}.woff",
                         "../fonts/#{$cfer-font}/#{$cfer-font}.ttf",
-                        "../fonts/#{$cfer-font}/#{$cfer-font}.svg"),
-                "../fonts/#{$cfer-font}/#{$cfer-font}.eot",
+                        "../fonts/#{$cfer-font}/#{$cfer-font}.svg",
+                "../fonts/#{$cfer-font}/#{$cfer-font}.eot"),
                 "normal",
                 "normal");
 }
