@@ -7,10 +7,10 @@
     $cfer-font: nth($cfer-fonts, $n);
 
     @include font-face(#{$cfer-font},
-                font-files("#{$cfer-font}/#{$cfer-font}.woff",
-                        "#{$cfer-font}/#{$cfer-font}.ttf",
-                        "#{$cfer-font}/#{$cfer-font}.svg"),
-                "#{$cfer-font}/#{$cfer-font}.eot",
+                font-files("../fonts/#{$cfer-font}/#{$cfer-font}.woff",
+                        "../fonts/#{$cfer-font}/#{$cfer-font}.ttf",
+                        "../fonts/#{$cfer-font}/#{$cfer-font}.svg"),
+                "../fonts/#{$cfer-font}/#{$cfer-font}.eot",
                 "normal",
                 "normal");
 }
