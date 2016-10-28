@@ -62,6 +62,7 @@ $cfer-fonts: amplify, amplify-light, amplify-icon, open-sans-regular, open-sans-
 
 $btn-font: "roboto-regular", Arial, sans-serif;
 
+$btn-height: 36px;
 $btn-lg-height: 44px;
 
 $btn-blue-color: #fff;
@@ -73,5 +74,5 @@ $btn-orange-bg: $amplify-orange;
 $btn-green-color: #fff;
 $btn-green-bg: $amplify-green;
 
-$btn-grey-color: $text-color-medium;
-$btn-grey-bg: $cfer-grey3;
+$btn-grey-color: lighten($text-color-medium, 10%);
+$btn-grey-bg: lighten($cfer-grey4, 3%);

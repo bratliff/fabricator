@@ -3,27 +3,44 @@
 // --------------------------------------------------
 
 .btn {
-	font-family: $btn-font;
+    font-family: $btn-font;
+    height: $btn-height;
+    line-height: $btn-height;
+    padding: 0 $padding-base-horizontal;
+
+    &:active,
+    &.active {
+    outline: 0;
+    background-image: none;
+    }
 }
 
 .btn-lg {
-	height: $btn-lg-height;
-	line-height: $btn-lg-height;
-	border-radius: $border-radius-base;
-	padding: 0 $padding-large-horizontal;
+    height: $btn-lg-height;
+    line-height: $btn-lg-height;
+    border-radius: $border-radius-base;
+    padding: 0 $padding-large-horizontal;
 }
 
 button + button {
-	margin-left: 20px;
+    margin-left: 20px;
 }
 
 // Button colors
 // -------------------------
 
 .btn-blue {
-  @include button-variant($btn-blue-color, $btn-blue-bg, darken($btn-blue-bg, 5%));
+    @include cfer-button($btn-blue-color, $btn-blue-bg);
 }
 
 .btn-orange {
-  @include button-variant($btn-orange-color, $btn-orange-bg, darken($btn-orange-bg, 5%));
+    @include cfer-button($btn-orange-color, $btn-orange-bg);
+}
+
+.btn-green {
+    @include cfer-button($btn-green-color, $btn-green-bg);
+}
+
+.btn-grey {
+    @include cfer-button($btn-grey-color, $btn-grey-bg);
 }
