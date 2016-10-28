@@ -37,6 +37,8 @@
   &.disabled,
   &[disabled],
   fieldset[disabled] & {
+    box-shadow: 0 2px 0 0 darken($background, 20%);
+    
     &,
     &:hover,
     &:focus,
