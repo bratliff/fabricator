@@ -34,12 +34,11 @@
     "babel-loader": "5.0.0",
     "babel-plugin-transform-react-jsx": "^6.8.0",
     "browser-sync": "^2.7.1",
-    "compass": "^0.1.1",
     "del": "^1.1.1",
     "fabricator-assemble": "^1.1.7",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.2.0",
-    "gulp-compass": "^2.1.0",
+    "gulp-cheerio": "^0.6.2",
     "gulp-csso": "^1.0.0",
     "gulp-if": "^1.2.5",
     "gulp-imagemin": "^2.2.1",
@@ -62,6 +61,7 @@
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "bootstrap-sass": "^3.3.7"
+    "bootstrap-sass": "^3.3.7",
+    "compass-mixins": "^0.12.10"
   }
 }

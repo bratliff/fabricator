@@ -20,7 +20,11 @@ module.exports = function(fabricatorConfig) {
 					test: /\.js$/,
 					exclude: /(node_modules|prism\.js)/,
 					loaders: ['babel-loader']
-				}
+				},
+                {
+                    test: /\.scss$/, 
+                    loader: "style-loader!raw-loader!sass-loader?includePaths[]=" + path.resolve(__dirname, "./node_modules/compass-mixins/lib")
+                    }
 			]
 		},
 		plugins: [],

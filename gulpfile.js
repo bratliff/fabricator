@@ -3,7 +3,7 @@
 // modules
 var assemble = require('fabricator-assemble');
 var browserSync = require('browser-sync');
-var compass = require('compass');
+var cheerio = require('gulp-cheerio');
 var csso = require('gulp-csso');
 var del = require('del');
 var gulp = require('gulp');
@@ -34,7 +34,7 @@ var config = {
 		},
 		styles: {
 			fabricator: 'src/assets/fabricator/styles/fabricator.scss',
-			toolkit: 'src/assets/toolkit/styles/toolkit.scss'
+			toolkit: 'src/assets/toolkit/styles/*.scss'
 		},
 		images: 'src/assets/toolkit/images/**/*',
         sounds: 'src/assets/toolkit/sounds/**/*',
@@ -122,10 +122,15 @@ gulp.task('sprites', function () {
 });
 
 //SVG Store and SVG inject
-gulp.task('svgstore', function () {
+gulp.task('svg', function () {
     var svgs = gulp
         .src('src/assets/toolkit/svg/*.svg')
-        .pipe(svgstore());
+        .pipe(svgstore())
+        .pipe(cheerio(function($, file){
+            $('svg > symbol').each(function(index, element){
+                $(element).attr('preserveAspectRatio', 'xMinYMid');
+            })
+        }));
 
     function fileContents (filePath, file) {
         return file.contents.toString();
@@ -228,6 +233,7 @@ gulp.task('default', ['clean'], function () {
 		'scripts',
 		'images',
         'sounds',
+        'svg',
 		'assemble'
 	];
 
