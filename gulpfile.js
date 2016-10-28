@@ -39,6 +39,7 @@ var config = {
 		images: 'src/assets/toolkit/images/**/*',
         sounds: 'src/assets/toolkit/sounds/**/*',
         svg: 'src/assets/toolkit/svg/**/*',
+		fonts: 'src/assets/toolkit/fonts/**/*',
 		views: 'src/toolkit/views/*.html'
 	},
 	dest: 'dist'
@@ -99,6 +100,12 @@ gulp.task('scripts', function (done) {
 	});
 });
 
+
+// fonts
+gulp.task('fonts', function () {
+	return gulp.src(config.src.fonts)
+		.pipe(gulp.dest(config.dest + '/assets/toolkit/fonts'));
+});
 
 // images
 gulp.task('images', ['favicon'], function () {
@@ -233,7 +240,8 @@ gulp.task('default', ['clean'], function () {
 		'scripts',
 		'images',
         'sounds',
-        'svg',
+        'fonts',
+		'svg',
 		'assemble'
 	];
 
