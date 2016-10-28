@@ -2,10 +2,54 @@
 // Overrides
 // --------------------------------------------------
 
-// =============================================================================
-// Font Face
-// =============================================================================
+// CFER Buttons
+// --------------------------------------------------
+@mixin cfer-button($color, $background) {
+  color: $color;
+  background-color: $background;
+  border-color: darken($background, 5%);
+  box-shadow: 0 2px 0 0 darken($background, 20%);
 
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: $color;
+    background-color: darken($background, 8%);
+	border-color: darken($background, 15%);
+  }
+  .open & { &.dropdown-toggle {
+    color: $color;
+    background-color: darken($background, 8%);
+        border-color: darken($background, 15%);
+  } }
+  &:active,
+  &.active {
+    background-image: none;
+	box-shadow: 0 1px 0 0 darken($background, 20%);
+    background-color: darken($background, 15%);
+    position: relative;
+    top: 1px;
+  }
+  .open & { &.dropdown-toggle {
+    background-image: none;
+  } }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: $background;
+		border-color: darken($background, 5%);
+    }
+  }
+}
+
+// Font Face
+// --------------------------------------------------
 @mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
 	$src: null;
 
