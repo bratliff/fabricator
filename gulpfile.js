@@ -241,7 +241,7 @@ gulp.task('default', ['clean'], function () {
 		'images',
         'sounds',
         'fonts',
-		'svg',
+        'svg',
 		'assemble'
 	];
 
