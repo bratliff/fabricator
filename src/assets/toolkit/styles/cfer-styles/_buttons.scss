@@ -20,6 +20,10 @@ button + button {
 // Button colors
 // -------------------------
 
-.btn-default {
-  @include button-variant($btn-text-color, $btn-default-bg, $btn-default-border);
+.btn-blue {
+  @include button-variant($btn-blue-color, $btn-blue-bg, darken($btn-blue-bg, 5%));
+}
+
+.btn-orange {
+  @include button-variant($btn-orange-color, $btn-orange-bg, darken($btn-orange-bg, 5%));
 }

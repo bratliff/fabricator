@@ -37,16 +37,6 @@ $brand-primary: $amplify-orange;
 $background-dark: $cfer-grey2;
 $background-light: $cfer-grey4;
 
-$text-dark: $cfer-grey1;
-$text-medium: $cfer-grey2;
-$text-light: $cfer-grey3;
-
-$btn-text-color: #fff;
-$btn-default-bg: $cfer-ui-blue;
-$btn-action-bg: $amplify-orange;
-$btn-confirm-bg: $cfer-ui-green;
-$btn-cancel-bg: $cfer-grey3;
-
 // Typography
 // --------------------------------------------------
 
@@ -59,7 +49,11 @@ $font-size-h2: 32px;
 $font-size-h3: 20px;
 $font-size-h4: 14px;
 
-$headings-font-weight: normal;
+// $headings-font-weight: normal;
+
+$text-color-dark: $cfer-grey1;
+$text-color-medium: $cfer-grey2;
+$text-color-light: $cfer-grey3;
 
 $cfer-fonts: amplify, amplify-light, amplify-icon, open-sans-regular, open-sans-light, open-sans-bold, open-sans-semi-bold, open-sans-extra-bold, open-sans-italic, open-sans-semi-bold-italic, open-sans-bold-italic, roboto-black, roboto-bold, roboto-italic, roboto-light, roboto-light-italic, roboto-medium, roboto-medium-italic, roboto-regular;
 
@@ -69,3 +63,15 @@ $cfer-fonts: amplify, amplify-light, amplify-icon, open-sans-regular, open-sans-
 $btn-font: "roboto-regular", Arial, sans-serif;
 
 $btn-lg-height: 44px;
+
+$btn-blue-color: #fff;
+$btn-blue-bg: $cfer-ui-blue;
+
+$btn-orange-color: #fff;
+$btn-orange-bg: $amplify-orange;
+
+$btn-green-color: #fff;
+$btn-green-bg: $amplify-green;
+
+$btn-grey-color: $text-color-medium;
+$btn-grey-bg: $cfer-grey3;
