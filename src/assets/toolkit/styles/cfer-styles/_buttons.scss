@@ -16,3 +16,10 @@
 button + button {
 	margin-left: 20px;
 }
+
+// Button colors
+// -------------------------
+
+.btn-default {
+  @include button-variant($btn-text-color, $btn-default-bg, $btn-default-border);
+}

@@ -16,10 +16,14 @@ $amplify-green: #8dc63f;
 $amplify-red: #ee3124;
 $amplify-yellow: #fdef42;
 
-// CFER colors
-$cfer-green: #00a651;
-$cfer-yellow: #fff200;
-$cfer-red: #e3121a;
+// CFER Performance colors
+$cfer-peformance-green: #00a651;
+$cfer-peformance-yellow: #fff200;
+$cfer-peformance-red: #e3121a;
+
+// CFER UI colors
+$cfer-ui-blue: #37a0f9;
+$cfer-ui-green: #00dd92;
 
 // Greys
 $cfer-grey1: #30333d;
@@ -29,11 +33,19 @@ $cfer-grey4: #f2f3f6;
 
 // Color assignments
 $brand-primary: $amplify-orange;
+
 $background-dark: $cfer-grey2;
 $background-light: $cfer-grey4;
+
 $text-dark: $cfer-grey1;
 $text-medium: $cfer-grey2;
 $text-light: $cfer-grey3;
+
+$btn-text-color: #fff;
+$btn-default-bg: $cfer-ui-blue;
+$btn-action-bg: $amplify-orange;
+$btn-confirm-bg: $cfer-ui-green;
+$btn-cancel-bg: $cfer-grey3;
 
 // Typography
 // --------------------------------------------------
