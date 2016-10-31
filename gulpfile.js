@@ -6,6 +6,7 @@ var browserSync = require('browser-sync');
 var cheerio = require('gulp-cheerio');
 var csso = require('gulp-csso');
 var del = require('del');
+var fontgen = require('gulp-fontgen');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var gulpif = require('gulp-if');
@@ -22,6 +23,8 @@ var svgSprite = require("gulp-svg-sprites");
 var svgstore = require('gulp-svgstore');
 var svgmin = require('gulp-svgmin');
 var webpack = require('webpack');
+var compass = require('compass'),
+  minifyCSS = require('gulp-minify-css');
 
 
 // configuration
@@ -81,7 +84,13 @@ gulp.task('styles:toolkit', function () {
 		.pipe(gulpif(config.dev, reload({stream:true})));
 });
 
-gulp.task('styles', ['styles:fabricator', 'styles:toolkit']);
+gulp.task('compass', function(cb) {
+    compass.compile(cb);
+});
+
+gulp.task('styles', ['styles:fabricator', 'compass']);
+
+
 
 
 // scripts
@@ -105,6 +114,14 @@ gulp.task('scripts', function (done) {
 gulp.task('fonts', function () {
 	return gulp.src(config.src.fonts)
 		.pipe(gulp.dest(config.dest + '/assets/toolkit/fonts'));
+});
+
+//
+gulp.task('fontgen', function() {
+  return gulp.src("src/assets/toolkit/fonts/**/*.{ttf,otf}")
+    .pipe(fontgen({
+      dest: config.dest + "assets/fonts"
+    }));
 });
 
 // images
