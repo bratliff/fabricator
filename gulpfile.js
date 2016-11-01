@@ -84,11 +84,11 @@ gulp.task('styles:toolkit', function () {
 		.pipe(gulpif(config.dev, reload({stream:true})));
 });
 
-gulp.task('compass', function(cb) {
+/*gulp.task('compass', function(cb) {
     compass.compile(cb);
-});
+});*/
 
-gulp.task('styles', ['styles:fabricator', 'compass']);
+gulp.task('styles', ['styles:fabricator', 'styles:toolkit']);
 
 
 
