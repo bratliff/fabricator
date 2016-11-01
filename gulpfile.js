@@ -8,6 +8,7 @@ var csso = require('gulp-csso');
 var del = require('del');
 var fontgen = require('gulp-fontgen');
 var gulp = require('gulp');
+var grunt = require('grunt');
 var gutil = require('gulp-util');
 var gulpif = require('gulp-if');
 var imagemin = require('gulp-imagemin');
@@ -25,6 +26,11 @@ var svgmin = require('gulp-svgmin');
 var webpack = require('webpack');
 var compass = require('compass'),
   minifyCSS = require('gulp-minify-css');
+
+
+require('gulp-grunt')(gulp, {
+    prefix: 'grunty-'
+});
 
 
 // configuration
@@ -58,6 +64,7 @@ var webpackCompiler = webpack(webpackConfig);
 gulp.task('clean', function (cb) {
 	del([config.dest], cb);
 });
+
 
 
 // styles
@@ -258,7 +265,7 @@ gulp.task('default', ['clean'], function () {
 		'images',
         'sounds',
         'fonts',
-        'svg',
+        'grunty-svg',
 		'assemble'
 	];
 
