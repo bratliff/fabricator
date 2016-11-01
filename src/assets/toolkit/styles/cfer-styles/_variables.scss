@@ -55,7 +55,10 @@ $text-color-dark: $cfer-grey1;
 $text-color-medium: $cfer-grey2;
 $text-color-light: $cfer-grey3;
 
-$cfer-fonts: amplify, amplify-light, amplify-icon, open-sans-regular, open-sans-light, open-sans-bold, open-sans-semi-bold, open-sans-extra-bold, open-sans-italic, open-sans-semi-bold-italic, open-sans-bold-italic, roboto-black, roboto-bold, roboto-italic, roboto-light, roboto-light-italic, roboto-medium, roboto-medium-italic, roboto-regular;
+
+//!!! Temporarily removed icons-material
+
+$cfer-fonts: amplify, amplify-light, icons-material, open-sans-regular, open-sans-light, open-sans-bold, open-sans-semi-bold, open-sans-extra-bold, open-sans-italic, open-sans-semi-bold-italic, open-sans-bold-italic, roboto-black, roboto-bold, roboto-italic, roboto-light, roboto-light-italic, roboto-medium, roboto-medium-italic, roboto-regular;
 
 // Buttons
 // --------------------------------------------------

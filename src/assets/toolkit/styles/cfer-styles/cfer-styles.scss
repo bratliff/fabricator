@@ -4,8 +4,9 @@
 @import "../bootstrap/mixins";
 @import "mixins"; //overrides
 
-// CFER Fonts
+// CFER Fonts and Icons
 @import "fonts";
+@import "icons";
 
 // Reset
 @import "../bootstrap/normalize";
@@ -31,7 +32,7 @@
 
 // Components
 @import "../bootstrap/component-animations";
-@import "../bootstrap/glyphicons";
+// @import "../bootstrap/glyphicons";
 @import "../bootstrap/dropdowns";
 @import "../bootstrap/button-groups";
 @import "../bootstrap/input-groups";
@@ -52,7 +53,7 @@
 @import "../bootstrap/wells";
 @import "../bootstrap/close";
 @import "component-animations"; //overrides
-@import "glyphicons"; //overrides
+// @import "glyphicons"; //overrides
 @import "dropdowns"; //overrides
 @import "button-groups"; //overrides
 @import "input-groups"; //overrides
