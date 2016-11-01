@@ -120,6 +120,7 @@ gulp.task('sounds', function () {
 		.pipe(gulp.dest(config.dest + '/assets/toolkit/sounds'));
 });
 
+/*
 // svgs
 gulp.task('sprites', function () {
     return gulp.src(config.src.svg)
@@ -148,8 +149,9 @@ gulp.task('svg', function () {
         .pipe(inject(svgs, { transform: fileContents }))
         .pipe(gulp.dest(config.dest + '/pages/'));
 });
+*/
 
-/*gulp.task('svgstore', function () {
+gulp.task('svgstore', function () {
     return gulp
         .src('src/assets/toolkit/svg/*.svg')
         .pipe(svgmin(function (file) {
@@ -165,7 +167,16 @@ gulp.task('svg', function () {
         }))
         .pipe(svgstore())
         .pipe(gulp.dest('dist/assets/toolkit/svg'));
-});*/
+});
+
+gulp.task('inject', function () {
+		var target = gulp.src('src/views/pages/svg-sample.html');
+		// It's not necessary to read the files (will speed up things), we're only after their paths:
+		var sources = gulp.src(['dist/assets/toolkit/svg/svg.svg'], {read: false});
+
+		return target.pipe(inject(sources))
+		.pipe(gulp.dest('dist/assets/toolkit/svg'));
+});
 
 
 gulp.task('favicon', function () {
@@ -241,7 +252,8 @@ gulp.task('default', ['clean'], function () {
 		'images',
         'sounds',
         'fonts',
-        'svg',
+        'svgstore',
+        'inject',
 		'assemble'
 	];
 
