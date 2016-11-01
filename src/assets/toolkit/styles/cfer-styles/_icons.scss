@@ -1,17 +1,8 @@
-@font-face {
-  font-family: 'icons-material';
-  src:  url('../fonts/icons-material/icons-material.eot?stt69t');
-  src:  url('../fonts/icons-material/icons-material.eot?stt69t#iefix') format('embedded-opentype'),
-    url('../fonts/icons-material/icons-material.ttf?stt69t') format('truetype'),
-    url('../fonts/icons-material/icons-material.woff?stt69t') format('woff'),
-    url('../fonts/icons-material/icons-material.svg?stt69t#icons-material') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
 
 [class^="icon-material-"], [class*=" icon-material-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icons-material' !important;
+  font-size: 24px;
   speak: none;
   font-style: normal;
   font-weight: normal;

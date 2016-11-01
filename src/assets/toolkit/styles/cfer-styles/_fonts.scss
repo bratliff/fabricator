@@ -2,15 +2,169 @@
 // CFER Fonts
 // --------------------------------------------------
 
-// Loop through fonts and generate corresponding font-face definitions
-@for $n from 1 through length($cfer-fonts) {
-    $cfer-font: nth($cfer-fonts, $n);
+// Automation is broken due to lack of Compass. Will try to restore it eventually.
 
-    @include font-face(#{$cfer-font},
-                font-files("../fonts/#{$cfer-font}/#{$cfer-font}.woff",
-                        "../fonts/#{$cfer-font}/#{$cfer-font}.ttf",
-                        "../fonts/#{$cfer-font}/#{$cfer-font}.svg",
-                "../fonts/#{$cfer-font}/#{$cfer-font}.eot"),
-                normal,
-                normal);
+// Loop through fonts and generate corresponding font-face definitions
+// @for $n from 1 through length($cfer-fonts) {
+//     $cfer-font: nth($cfer-fonts, $n);
+
+//     @include font-face(#{$cfer-font},
+//                 font-files("../fonts/#{$cfer-font}/#{$cfer-font}.woff",
+//                         "../fonts/#{$cfer-font}/#{$cfer-font}.ttf",
+//                         "../fonts/#{$cfer-font}/#{$cfer-font}.svg",
+//                 "../fonts/#{$cfer-font}/#{$cfer-font}.eot"),
+//                 normal,
+//                 normal);
+// }
+
+@font-face {
+    font-family: "amplify";
+    src: url('../fonts/amplify/amplify.eot');
+    src: url('../fonts/amplify/amplify.eot?#iefix') format('embedded-opentype'), url('../fonts/amplify/amplify.woff') format('woff'), url('../fonts/amplify/amplify.ttf') format('truetype'), url('../fonts/amplify/amplify.svg') format('svg');
+    font-weight: "normal";
+    font-style: "normal"
+}
+
+@font-face {
+    font-family: "amplify-light";
+    src: url('../fonts/amplify-light/amplify-light.eot');
+    src: url('../fonts/amplify-light/amplify-light.eot?#iefix') format('embedded-opentype'), url('../fonts/amplify-light/amplify-light.woff') format('woff'), url('../fonts/amplify-light/amplify-light.ttf') format('truetype'), url('../fonts/amplify-light/amplify-light.svg') format('svg');
+    font-weight: "normal";
+    font-style: "normal"
+}
+
+@font-face {
+    font-family: "icons-material";
+    src: url('../fonts/icons-material/icons-material.eot');
+    src: url('../fonts/icons-material/icons-material.eot?#iefix') format('embedded-opentype'), url('../fonts/icons-material/icons-material.woff') format('woff'), url('../fonts/icons-material/icons-material.ttf') format('truetype'), url('../fonts/icons-material/icons-material.svg') format('svg');
+    font-weight: "normal";
+    font-style: "normal"
+}
+
+@font-face {
+    font-family: "open-sans-regular";
+    src: url('../fonts/open-sans-regular/open-sans-regular.eot');
+    src: url('../fonts/open-sans-regular/open-sans-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/open-sans-regular/open-sans-regular.woff') format('woff'), url('../fonts/open-sans-regular/open-sans-regular.ttf') format('truetype'), url('../fonts/open-sans-regular/open-sans-regular.svg') format('svg');
+    font-weight: "normal";
+    font-style: "normal"
+}
+
+@font-face {
+    font-family: "open-sans-light";
+    src: url('../fonts/open-sans-light/open-sans-light.eot');
+    src: url('../fonts/open-sans-light/open-sans-light.eot?#iefix') format('embedded-opentype'), url('../fonts/open-sans-light/open-sans-light.woff') format('woff'), url('../fonts/open-sans-light/open-sans-light.ttf') format('truetype'), url('../fonts/open-sans-light/open-sans-light.svg') format('svg');
+    font-weight: "normal";
+    font-style: "normal"
+}
+
+@font-face {
+    font-family: "open-sans-bold";
+    src: url('../fonts/open-sans-bold/open-sans-bold.eot');
+    src: url('../fonts/open-sans-bold/open-sans-bold.eot?#iefix') format('embedded-opentype'), url('../fonts/open-sans-bold/open-sans-bold.woff') format('woff'), url('../fonts/open-sans-bold/open-sans-bold.ttf') format('truetype'), url('../fonts/open-sans-bold/open-sans-bold.svg') format('svg');
+    font-weight: "normal";
+    font-style: "normal"
+}
+
+@font-face {
+    font-family: "open-sans-semi-bold";
+    src: url('../fonts/open-sans-semi-bold/open-sans-semi-bold.eot');
+    src: url('../fonts/open-sans-semi-bold/open-sans-semi-bold.eot?#iefix') format('embedded-opentype'), url('../fonts/open-sans-semi-bold/open-sans-semi-bold.woff') format('woff'), url('../fonts/open-sans-semi-bold/open-sans-semi-bold.ttf') format('truetype'), url('../fonts/open-sans-semi-bold/open-sans-semi-bold.svg') format('svg');
+    font-weight: "normal";
+    font-style: "normal"
+}
+
+@font-face {
+    font-family: "open-sans-extra-bold";
+    src: url('../fonts/open-sans-extra-bold/open-sans-extra-bold.eot');
+    src: url('../fonts/open-sans-extra-bold/open-sans-extra-bold.eot?#iefix') format('embedded-opentype'), url('../fonts/open-sans-extra-bold/open-sans-extra-bold.woff') format('woff'), url('../fonts/open-sans-extra-bold/open-sans-extra-bold.ttf') format('truetype'), url('../fonts/open-sans-extra-bold/open-sans-extra-bold.svg') format('svg');
+    font-weight: "normal";
+    font-style: "normal"
+}
+
+@font-face {
+    font-family: "open-sans-italic";
+    src: url('../fonts/open-sans-italic/open-sans-italic.eot');
+    src: url('../fonts/open-sans-italic/open-sans-italic.eot?#iefix') format('embedded-opentype'), url('../fonts/open-sans-italic/open-sans-italic.woff') format('woff'), url('../fonts/open-sans-italic/open-sans-italic.ttf') format('truetype'), url('../fonts/open-sans-italic/open-sans-italic.svg') format('svg');
+    font-weight: "normal";
+    font-style: "normal"
+}
+
+@font-face {
+    font-family: "open-sans-semi-bold-italic";
+    src: url('../fonts/open-sans-semi-bold-italic/open-sans-semi-bold-italic.eot');
+    src: url('../fonts/open-sans-semi-bold-italic/open-sans-semi-bold-italic.eot?#iefix') format('embedded-opentype'), url('../fonts/open-sans-semi-bold-italic/open-sans-semi-bold-italic.woff') format('woff'), url('../fonts/open-sans-semi-bold-italic/open-sans-semi-bold-italic.ttf') format('truetype'), url('../fonts/open-sans-semi-bold-italic/open-sans-semi-bold-italic.svg') format('svg');
+    font-weight: "normal";
+    font-style: "normal"
+}
+
+@font-face {
+    font-family: "open-sans-bold-italic";
+    src: url('../fonts/open-sans-bold-italic/open-sans-bold-italic.eot');
+    src: url('../fonts/open-sans-bold-italic/open-sans-bold-italic.eot?#iefix') format('embedded-opentype'), url('../fonts/open-sans-bold-italic/open-sans-bold-italic.woff') format('woff'), url('../fonts/open-sans-bold-italic/open-sans-bold-italic.ttf') format('truetype'), url('../fonts/open-sans-bold-italic/open-sans-bold-italic.svg') format('svg');
+    font-weight: "normal";
+    font-style: "normal"
+}
+
+@font-face {
+    font-family: "roboto-black";
+    src: url('../fonts/roboto-black/roboto-black.eot');
+    src: url('../fonts/roboto-black/roboto-black.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto-black/roboto-black.woff') format('woff'), url('../fonts/roboto-black/roboto-black.ttf') format('truetype'), url('../fonts/roboto-black/roboto-black.svg') format('svg');
+    font-weight: "normal";
+    font-style: "normal"
+}
+
+@font-face {
+    font-family: "roboto-bold";
+    src: url('../fonts/roboto-bold/roboto-bold.eot');
+    src: url('../fonts/roboto-bold/roboto-bold.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto-bold/roboto-bold.woff') format('woff'), url('../fonts/roboto-bold/roboto-bold.ttf') format('truetype'), url('../fonts/roboto-bold/roboto-bold.svg') format('svg');
+    font-weight: "normal";
+    font-style: "normal"
+}
+
+@font-face {
+    font-family: "roboto-italic";
+    src: url('../fonts/roboto-italic/roboto-italic.eot');
+    src: url('../fonts/roboto-italic/roboto-italic.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto-italic/roboto-italic.woff') format('woff'), url('../fonts/roboto-italic/roboto-italic.ttf') format('truetype'), url('../fonts/roboto-italic/roboto-italic.svg') format('svg');
+    font-weight: "normal";
+    font-style: "normal"
+}
+
+@font-face {
+    font-family: "roboto-light";
+    src: url('../fonts/roboto-light/roboto-light.eot');
+    src: url('../fonts/roboto-light/roboto-light.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto-light/roboto-light.woff') format('woff'), url('../fonts/roboto-light/roboto-light.ttf') format('truetype'), url('../fonts/roboto-light/roboto-light.svg') format('svg');
+    font-weight: "normal";
+    font-style: "normal"
+}
+
+@font-face {
+    font-family: "roboto-light-italic";
+    src: url('../fonts/roboto-light-italic/roboto-light-italic.eot');
+    src: url('../fonts/roboto-light-italic/roboto-light-italic.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto-light-italic/roboto-light-italic.woff') format('woff'), url('../fonts/roboto-light-italic/roboto-light-italic.ttf') format('truetype'), url('../fonts/roboto-light-italic/roboto-light-italic.svg') format('svg');
+    font-weight: "normal";
+    font-style: "normal"
+}
+
+@font-face {
+    font-family: "roboto-medium";
+    src: url('../fonts/roboto-medium/roboto-medium.eot');
+    src: url('../fonts/roboto-medium/roboto-medium.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto-medium/roboto-medium.woff') format('woff'), url('../fonts/roboto-medium/roboto-medium.ttf') format('truetype'), url('../fonts/roboto-medium/roboto-medium.svg') format('svg');
+    font-weight: "normal";
+    font-style: "normal"
+}
+
+@font-face {
+    font-family: "roboto-medium-italic";
+    src: url('../fonts/roboto-medium-italic/roboto-medium-italic.eot');
+    src: url('../fonts/roboto-medium-italic/roboto-medium-italic.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto-medium-italic/roboto-medium-italic.woff') format('woff'), url('../fonts/roboto-medium-italic/roboto-medium-italic.ttf') format('truetype'), url('../fonts/roboto-medium-italic/roboto-medium-italic.svg') format('svg');
+    font-weight: "normal";
+    font-style: "normal"
+}
+
+@font-face {
+    font-family: "roboto-regular";
+    src: url('../fonts/roboto-regular/roboto-regular.eot');
+    src: url('../fonts/roboto-regular/roboto-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto-regular/roboto-regular.woff') format('woff'), url('../fonts/roboto-regular/roboto-regular.ttf') format('truetype'), url('../fonts/roboto-regular/roboto-regular.svg') format('svg');
+    font-weight: "normal";
+    font-style: "normal"
 }
