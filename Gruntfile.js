@@ -2,6 +2,7 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
 
+        // CFER: generate SVG sprite
         svgstore: {
             options: {
                 includedemo: true,
@@ -16,28 +17,29 @@ module.exports = function(grunt) {
                 xmlns: 'http://www.w3.org/2000/svg'
                 },
                 symbol: {
-                preserveAspectRatio: 'xMidYMin meet'
+                preserveAspectRatio: 'xMidYMid meet'
             }
         },
             default : {
                 files: {
-                'dist/assets/toolkit/svg/all.svg': ['src/assets/toolkit/svg/*.svg'],
+                'dist/assets/toolkit/svg/cfer-sprite.svg': ['src/assets/toolkit/svg/cfer/*.svg'],
                 },
             },
         },
 
-
+        // CFER: generate sprite injector js
         svginjector: {
             example: {
                 options: {
-                    container: 'svg-container'
+                    container: '#svg-container'
                 },
                 files: {
-                    'dist/assets/toolkit/svg/svg.js': 'dist/assets/toolkit/images/all.svg'
+                    'dist/assets/toolkit/svg/cfer-sprite.js': 'dist/assets/toolkit/svg/cfer-sprite.svg'
                 }
             }
         }
     });
+
     grunt.loadNpmTasks('grunt-svgstore');
     grunt.loadNpmTasks('grunt-svginjector');
     grunt.registerTask('svg', ['svgstore', 'svginjector']);
