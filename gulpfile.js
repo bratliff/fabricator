@@ -23,8 +23,7 @@ var svgSprite = require("gulp-svg-sprites");
 var svgstore = require('gulp-svgstore');
 var svgmin = require('gulp-svgmin');
 var webpack = require('webpack');
-var compass = require('compass'),
-  minifyCSS = require('gulp-minify-css');
+var minifyCSS = require('gulp-minify-css');
 
 
 require('gulp-grunt')(gulp, {
